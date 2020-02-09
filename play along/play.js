@@ -4,7 +4,9 @@ let container = document.getElementById(`square-container`);
 class Square {
     constructor(x, y, size) {
         this.div = document.createElement(`div`);
+        //this.element.id = (`box`)
         this.div.classList.add(`square`);
+        document.getElementById(`square-container`).innerText = Math.floor((Math.random() * 6) + 1);
         this.div.style.left = `${x}px`;
         this.div.style.top = `${y}px`;
         this.div.style.width = `${size}px`;
