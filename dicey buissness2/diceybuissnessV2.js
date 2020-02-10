@@ -11,7 +11,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
     class Dice {
         constructor() {
             this.div = document.createElement(`div`);
-            this.dtxt = document.createTextNode(Math.floor((Math.random() * 6) + 1));
+            this.dtxt = document.createTextNode(Math.floor((Math.random() * 7) + 1));
             this.div.appendChild(this.dtxt);
             this.div.className = `square`
             this.div.id = box;
@@ -39,7 +39,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
     roll.addEventListener(`click`, function () {
         let diceArr = document.querySelectorAll(`.square`);
         diceArr.forEach(die => {
-            die.innerText = Math.floor((Math.random() * 6) + 1);
+            die.innerText = Math.floor((Math.random() * 7) + 1);
         })
     });
 
