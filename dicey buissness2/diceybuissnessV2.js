@@ -2,7 +2,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
     let btn2 = document.getElementById(`generate`);
     let sum = document.getElementById(`sum`);
     let roll = document.getElementById(`roll`);
-
+    let card = document.getElementsByClassName(`card-body`)
     let box = `box`;
 
 
@@ -11,8 +11,8 @@ document.addEventListener(`DOMContentLoaded`, function () {
     class Dice {
         constructor() {
             this.div = document.createElement(`div`);
-            this.dtxt = document.createTextNode(Math.floor((Math.random() * 6) + 1));
-            this.div.appendChild(this.dtxt);
+            this.value = document.createTextNode(Math.floor((Math.random() * 6) + 1));
+            this.div.appendChild(this.value);
             this.div.className = `square`
             this.div.id = box;
             document.body.appendChild(this.div);
